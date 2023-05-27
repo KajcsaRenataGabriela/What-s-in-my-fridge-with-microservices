@@ -13,3 +13,5 @@ Microservice B: CRUD for a FireBase FireStore database for a fridge (add, edit, 
 * The microservice communicate with each other
 
 * Used timeout in order to handle errors for communication between microservices
+
+* Streams in order to have reactive response in page
