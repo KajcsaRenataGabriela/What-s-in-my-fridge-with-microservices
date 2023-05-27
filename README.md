@@ -4,6 +4,8 @@
   - Microservice A: Authentication using Firebase Authentication
   - Microservice B: CRUD for a FireBase FireStore database for a fridge (add, edit, delete, read food)
 
+
+
 * Used dockerfiles to create images
 
 * Used kubernetes to deploy each microservice
