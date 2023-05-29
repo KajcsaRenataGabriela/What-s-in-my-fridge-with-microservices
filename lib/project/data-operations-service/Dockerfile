@@ -1,22 +1,20 @@
-# Use the base Dart image
-FROM cirrusci/flutter
+# Use the base Flutter image
+FROM cirrusci/flutter:latest
 
-# Set the working directory to the root of your project
-WORKDIR /app
+# Set the working directory
+WORKDIR /data-operations-service
 
-# Copy the necessary files to the Docker image
-COPY pubspec.yaml .
-COPY pubspec.lock .
-COPY src/ ./src
+# Copy the pubspec.yaml and pubspec.lock files to the Docker image
+COPY ../pubspec.yaml ./
 
-# Fetch the Dart dependencies
+# Install dependencies using flutter pub
 RUN flutter pub get
 
 # Copy the rest of the microservice files to the Docker image
 COPY . .
 
-# Expose the port(s) if necessary
+# Expose the necessary ports
 EXPOSE 8081
 
-# Specify the entry point command to start the data retrieval microservice
-CMD ["dart", "app/src/frigde_main.dart"]
+# Specify the entry point command to start the authentication microservice
+CMD ["dart", "src/fridge_main.dart"]

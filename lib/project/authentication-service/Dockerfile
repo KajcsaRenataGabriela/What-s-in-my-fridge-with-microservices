@@ -2,7 +2,7 @@
 FROM cirrusci/flutter:stable
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /authentication-service
 
 # Copy the pubspec.yaml and pubspec.lock files to the Docker image
 COPY ../pubspec.yaml ./
@@ -18,4 +18,4 @@ EXPOSE 8080
 
 
 # Specify the entry point command to start the authentication microservice
-CMD ["dart", "auth_main.dart"]
+CMD ["dart", "src/auth_main.dart"]
