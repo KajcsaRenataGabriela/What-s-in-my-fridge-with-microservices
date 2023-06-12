@@ -1,0 +1,24 @@
+name: data_operations_service
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  firebase_auth: ^4.6.2
+  firebase_core: ^2.13.1
+  cloud_firestore: ^4.8.0
+  login:
+    git:
+      url: https://github.com/KajcsaRenataGabriela/authentication_service.git
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
